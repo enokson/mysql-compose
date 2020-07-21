@@ -33,7 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
     "chai": "^4.2.0",
-    "codecov": "^3.7.0",
+    "codecov": "^3.7.1",
     "knex": "^0.21.2",
     "microtime": "^3.0.0",
     "mocha": "^8.0.1",
