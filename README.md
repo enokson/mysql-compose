@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/enokson/mysql-compose/branch/master/graph/badge.svg)](https://codecov.io/gh/enokson/mysql-compose)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/enokson/mysql-compose/badge.svg?targetFile=package.json)](https://snyk.io/test/github/enokson/mysql-compose?targetFile=package.json)
-# sql-compose
+# mysql-compose
 The best elegance and speed have to offer
 
 ## Install
