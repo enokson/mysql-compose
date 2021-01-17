@@ -104,28 +104,28 @@ exports.updates = function () {
     for (var _i = 0; _i < arguments.length; _i++) {
         sets[_i] = arguments[_i];
     }
-    return "SET " + sets.join(', ');
+    return "SET " + joinStr(', ', sets);
 };
 exports.where = function () {
     var conditions = [];
     for (var _i = 0; _i < arguments.length; _i++) {
         conditions[_i] = arguments[_i];
     }
-    return "WHERE " + conditions.join(' ');
+    return "WHERE " + joinStr(' ', conditions);
 };
 exports.and = function () {
     var conditions = [];
     for (var _i = 0; _i < arguments.length; _i++) {
         conditions[_i] = arguments[_i];
     }
-    return "(" + conditions.join(' AND ') + ")";
+    return "(" + joinStr(' AND ', conditions) + ")";
 };
 exports.or = function () {
     var conditions = [];
     for (var _i = 0; _i < arguments.length; _i++) {
         conditions[_i] = arguments[_i];
     }
-    return "(" + conditions.join(' OR ') + ")";
+    return "(" + joinStr(' OR ', conditions) + ")";
 };
 exports.operate = exports.curry(function (operator, key, value) { return key + " " + operator + " " + value; });
 exports.eq = exports.operate('=');
