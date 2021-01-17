@@ -68,10 +68,10 @@ export const keyValuePairs = (...values: KVObject[]) => {
 }
 export const keyValue = curry((key: string, value: any) => ({ key, value: sqlString.escape(value) }))
 export const set = curry((key: string, value: string) => `${key} = ${sqlString.escape(value)}`)
-export const updates = (...sets: string[]) => `SET ${sets.join(', ')}`
-export const where = (...conditions: string[]) => `WHERE ${conditions.join(' ')}`
-export const and = (...conditions: string[]) => `(${conditions.join(' AND ')})`
-export const or = (...conditions: string[]) => `(${conditions.join(' OR ')})`
+export const updates = (...sets: string[]) => `SET ${joinStr(', ', sets)}`
+export const where = (...conditions: string[]) => `WHERE ${joinStr(' ', conditions)}`
+export const and = (...conditions: string[]) => `(${joinStr(' AND ', conditions)})`
+export const or = (...conditions: string[]) => `(${joinStr(' OR ', conditions)})`
 export const operate = curry((operator: Operator, key: string, value: any) => `${key} ${operator} ${value}`)
 export const eq = operate('=')
 export const gt = operate('>')
